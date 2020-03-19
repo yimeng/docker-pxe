@@ -1,0 +1,11 @@
+default vesamenu.c32
+prompt 0
+timeout 3
+ONTIMEOUT CentOS 7
+
+LABEL CentOS 7
+        MENU LABEL CentOS 123
+        KERNEL vmlinuz
+        #APPEND ks initrd=initrd.img ramdisk_size=100000 ksdevice=eth1 ip=dhcp url --url http://192.168.33.11/
+  	append initrd=initrd.img ks=http://192.168.33.11/anaconda-ks.cfg
+
